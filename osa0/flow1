@@ -1,0 +1,13 @@
+title flowchart 'press save'
+
+note right of browser: user presses "Save"
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+server-->browser: browser receives notes
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+server-->browser: main.js
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: data.json
+note right of browser: Conclusion: the message is first posted to the server and then\nthe whole page is reloaded.

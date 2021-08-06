@@ -1,0 +1,12 @@
+title SPA flowchart 'load page'
+
+note right of browser: user opens SPA-version
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/SPA
+server-->browser: browser receives notes
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+server-->browser: spa.js
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: data.json
+note right of browser: difference between spa and non-spa is the .js code
